@@ -27,47 +27,43 @@ packer.init {
 packer.startup({
 	function(use)
 		use "wbthomason/packer.nvim"
-		use {
-			'nvim-treesitter/nvim-treesitter',
-			run = ':TSUpdate'
-		}
 		use "nvim-lua/plenary.nvim"
 		use "shaunsingh/nord.nvim"
-		use {
-			"williamboman/mason.nvim",
-			config = function() require("configs.mason") end
-		}
-		use "williamboman/mason-lspconfig.nvim"
+		use	"williamboman/mason.nvim"
+	  use "williamboman/mason-lspconfig.nvim"
 		use "neovim/nvim-lspconfig"
 		use "hrsh7th/cmp-nvim-lsp"
 		use "hrsh7th/cmp-buffer"
 		use "hrsh7th/cmp-path"
 		use "hrsh7th/cmp-cmdline"
-		use {
-			"hrsh7th/nvim-cmp",
-			config = function() require("configs.cmp") end
-		}
-		use {
-			"L3MON4D3/LuaSnip",
-			config = function() require("configs.luasnip") end
-		}
+		use	"hrsh7th/nvim-cmp"
+		use	"L3MON4D3/LuaSnip"
 		use "saadparwaiz1/cmp_luasnip"
+    use "lukas-reineke/indent-blankline.nvim"
+    use "stevearc/dressing.nvim"
+    use "mrjones2014/legendary.nvim"
+    use "glepnir/lspsaga.nvim"
+    use "lewis6991/gitsigns.nvim"
+    use "folke/which-key.nvim"
 		use {
 			"jose-elias-alvarez/null-ls.nvim",
 			requires = "nvim-lua/plenary.nvim",
-			config = function() require("configs.null-ls") end
 		}
 		use {
 			"nvim-telescope/telescope.nvim",
 			requires = "nvim-lua/plenary.nvim"
 		}
 		use {
-			'nvim-telescope/telescope-fzf-native.nvim',
-			run = 'make'
+			"nvim-telescope/telescope-fzf-native.nvim",
+			run = "make"
 		}
 		use {
 			"folke/trouble.nvim",
 			requires = "kyazdani42/nvim-web-devicons",
+		}
+    use {
+			"nvim-treesitter/nvim-treesitter",
+			run = ":TSUpdate"
 		}
 	end
 })

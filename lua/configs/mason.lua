@@ -25,3 +25,10 @@ lspconfig.sumneko_lua.setup {
     },
   },
 }
+
+local langs = {
+	["tsserver"] = {}
+}
+for key, value in pairs(langs) do
+	lspconfig[key].setup{value}
+end

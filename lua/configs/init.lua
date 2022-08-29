@@ -1,1 +1,11 @@
-
+require("configs.mason")
+require("configs.cmp")
+require("configs.luasnip")
+require("configs.null-ls")
+require("configs.gitsigns")
+require("configs.telescope")
+require("configs.indent")
+require("configs.which-key")
+require("configs.legendary")
+require("configs.lspsaga")
+require("configs.trouble")
