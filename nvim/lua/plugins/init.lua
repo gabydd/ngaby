@@ -47,6 +47,7 @@ packer.startup({
     use "folke/which-key.nvim"
     use "ii14/emmylua-nvim"
     use "b0o/schemastore.nvim"
+    use "numToStr/Comment.nvim"
     use {
       "nvim-neorg/neorg",
       requires = "nvim-lua/plenary.nvim",
