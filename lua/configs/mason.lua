@@ -9,9 +9,10 @@ end
 mason.setup()
 masonlsp.setup()
   local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-lspconfig.sumneko_lua.setup {
-	capabilities = capabilities,
-	settings = {
+
+local langs = {
+	["tsserver"] = {},
+  ["sumneko_lua"] = {
     Lua = {
       runtime = {
         version = 'LuaJIT',
@@ -24,11 +25,18 @@ lspconfig.sumneko_lua.setup {
       },
     },
   },
-}
-
-local langs = {
-	["tsserver"] = {}
+  ["jsonls"] = {
+    json = {
+      schemas = require('schemastore').json.schemas(),
+      validate = { enable = true },
+    },
+  },
+  ["hls"] = {},
+  ["emmet_ls"] = {},
 }
 for key, value in pairs(langs) do
-	lspconfig[key].setup{value}
+	lspconfig[key].setup {
+    capabilities = capabilities,
+    settings = value,
+  }
 end

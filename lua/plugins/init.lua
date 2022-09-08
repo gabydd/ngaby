@@ -45,6 +45,12 @@ packer.startup({
     use "glepnir/lspsaga.nvim"
     use "lewis6991/gitsigns.nvim"
     use "folke/which-key.nvim"
+    use "ii14/emmylua-nvim"
+    use "b0o/schemastore.nvim"
+    use {
+      "nvim-neorg/neorg",
+      requires = "nvim-lua/plenary.nvim",
+    }
 		use {
 			"jose-elias-alvarez/null-ls.nvim",
 			requires = "nvim-lua/plenary.nvim",
