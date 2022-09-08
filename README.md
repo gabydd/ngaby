@@ -1,2 +1,3 @@
 # ngaby
-neovim config that requires neovim master
+
+nord themed neovim, xmonad and polybar config
