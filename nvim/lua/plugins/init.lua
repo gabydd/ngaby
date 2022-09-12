@@ -45,9 +45,18 @@ packer.startup({
     use "glepnir/lspsaga.nvim"
     use "lewis6991/gitsigns.nvim"
     use "folke/which-key.nvim"
-    use "ii14/emmylua-nvim"
     use "b0o/schemastore.nvim"
     use "numToStr/Comment.nvim"
+    use "rafamadriz/friendly-snippets"
+    use "folke/lua-dev.nvim"
+    use "windwp/nvim-autopairs"
+    use "kyazdani42/nvim-web-devicons"
+    use "rcarriga/nvim-notify"
+    use "nvim-lua/popup.nvim"
+    use "NvChad/nvim-colorizer.lua"
+    use "feline-nvim/feline.nvim"
+    use "p00f/nvim-ts-rainbow"
+    use "onsails/lspkind.nvim"
     use {
       "nvim-neorg/neorg",
       requires = "nvim-lua/plenary.nvim",
@@ -72,5 +81,13 @@ packer.startup({
 			"nvim-treesitter/nvim-treesitter",
 			run = ":TSUpdate"
 		}
+    use {
+      "nvim-neo-tree/neo-tree.nvim",
+      requires = {
+        "kyazdani42/nvim-web-devicons",
+        "MunifTanjim/nui.nvim",
+        "nvim-lua/plenary.nvim",
+      }
+    }
 	end
 })

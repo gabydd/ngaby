@@ -6,6 +6,8 @@ if not ok_m or not ok_mlsp or not ok_lsp then
 	return
 end
 
+require("lua-dev").setup({
+})
 mason.setup()
 masonlsp.setup()
   local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -33,6 +35,8 @@ local langs = {
   },
   ["hls"] = {},
   ["emmet_ls"] = {},
+  ["solargraph"] = {},
+  ["tailwindcss"] = {},
 }
 for key, value in pairs(langs) do
 	lspconfig[key].setup {

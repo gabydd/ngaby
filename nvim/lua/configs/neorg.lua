@@ -20,6 +20,7 @@ neorg.setup {
     },
     ["core.gtd.base"] = {
       config = {
+        workspace = "school",
       }
     },
     ["core.norg.completion"] = {
